@@ -1,0 +1,7 @@
+# Custom alias file
+
+alias src="source $MY_DOTDIR/.zshrc"
+alias zshcfg="vim $My_DOTDIR/.zshrc"
+alias vimcfg="vim $MY_DOTDIR/.vimrc"
+alias aliases="vim $MY_DOTDIR/.aliases"
+alias vim="nvim -u $MY_DOTDIR/.vimrc"
