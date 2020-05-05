@@ -7,37 +7,37 @@ function virtualenv_info {
 ZSH_THEME="gentoo"
 
 # Sourcing files
-source $HOME/.dotfiles/.zshenv
-source $MY_DOTDIR/.aliases
+#source $HOME/.dotfiles/.zshenv
 
 # Plugin list
 plugins=(
-tmux
-git
-zsh-syntax-highlighting
-zsh-autosuggestions
-colored-man-pages
-colorize
-command-not-found
-copydir
-copyfile
-cp
-virtualenv
-gitignore
-pip
-lol
-extract
-vundle
-history
+    tmux
+    git
+    zsh-syntax-highlighting
+    colored-man-pages
+    colorize
+    command-not-found
+    copydir
+    copyfile
+    cp
+    virtualenv
+    gitignore
+    pip
+    lol
+    extract
+    vundle
+    history
 )
 
 # Loading plugins
 ZSH_DISABLE_COMPFIX=true
-source $ZSH/oh-my-zsh.sh
 
+ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=$MY_DOTDIR/.tmux.conf
+ZSH_TMUX_CONFIG=$HOME/.config/tmux/.tmux.conf
 
+source $HOME/.dotfiles/.aliases
+source $ZSH/oh-my-zsh.sh
 
 ## User configuration ##
 

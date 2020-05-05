@@ -6,6 +6,9 @@ export MY_CONFDIR="$HOME/.config"
 
 # Default programs
 export EDITOR="nvim"
+export BROWSER="firefox"
+
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Zsh variables
 export ZDOTDIR="$MY_CONFDIR/zsh"

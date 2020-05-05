@@ -10,13 +10,11 @@ set rtp+=~/.config/vim/bundle/Vundle.vim
 call vundle#begin('$HOME/.config/vim')
 
 " Vundle plugins
-" ANSIBLE - VIM PLUGINS LIST BEGIN
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'itchyny/lightline.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -25,17 +23,13 @@ Plugin 'dense-analysis/ale'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" ANSIBLE - VIM PLUGINS LIST END
+Plugin 'taglist.vim'
+Plugin 'vim-scripts/AutoComplPop'
 
 " Plugins configuration
-" ANSIBLE - PLUGIN CONFIGURATION BEGIN
 " Python highlighting
 let python_highlight_all=1
 syntax on
-
-" YouCompleteMe configuration
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Lightline configuration
 set laststatus=2
@@ -48,15 +42,23 @@ set noshowmode
 " NERDTree configuration
 autocmd vimenter * NERDTree
 nmap <F6> :NERDTreeToggle<CR>
-" ANSIBLE - PLUGIN CONFIGURATION END
 
 " End Vendle section
 call vundle#end()
-filetype plugin indent on
+
+" Autocomplete configuration
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
+
+inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
+inoremap <expr> <C-h> pumvisible() ? "<C-e>" : "<C-h>"
+inoremap <expr> <C-l> pumvisible() ? "<C-y>" : "<C-l>"
+
+inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
 
 " Editor configuration
-" ANSIBLE - EDITOR CONFIGURATION BEGIN
-
 filetype plugin indent on
 set number relativenumber
 
@@ -75,7 +77,6 @@ set list
 set tabstop=4
 set shiftwidth=4
 set expandtab
-" ANSIBLE - EDITOR CONFIGURATION END
 
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
