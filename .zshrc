@@ -20,8 +20,8 @@ plugins=(
     copydir
     copyfile
     cp
-    virtualenv
     gitignore
+    virtualenv
     pip
     lol
     extract
@@ -45,4 +45,6 @@ source $ZSH/oh-my-zsh.sh
 uname -r | grep -q 'Microsoft' && LS_COLORS='ow=01;34;40'; export LS_COLORS
 
 neofetch
-export VIRTUAL_ENV_DISABLE_PROMPT
+
+export VIRTUAL_ENV_DISABLE_PROMPT=
+
