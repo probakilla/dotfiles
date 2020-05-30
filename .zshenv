@@ -18,5 +18,6 @@ export ZSH=$HOME/.config/oh-my-zsh
 # Custom locations
 export LOCAL_BIN="$HOME/.local/bin"
 export MY_SCRIPTS="$HOME/.local/scripts"
-export PATH=$PATH:$LOCAL_BIN:$MY_SCRIPTS
+export LOCAL_PYBIN="$HOME/.local/pybin/"
+export PATH=$PATH:$LOCAL_BIN:$MY_SCRIPTS:$LOCAL_PYBIN
 

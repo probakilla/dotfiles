@@ -27,6 +27,7 @@ plugins=(
     extract
     vundle
     history
+    zsh-z
 )
 
 # Loading plugins

@@ -7,4 +7,3 @@ alias aliases="vim $MY_DOTDIR/.aliases"
 alias vim="nvim -u $MY_DOTDIR/.vimrc"
 alias tmux='tmux -f "$HOME/.config/tmux/.tmux.conf"'
 alias neomutt='neomutt -F $HOME/.config/mutt/muttrc'
-alias firefox='/mnt/c/Program\ Files\ \(x86\)/Mozilla\ Firefox/firefox.exe'
