@@ -4,7 +4,7 @@ function virtualenv_info {
 
 # Oh my zsh theme
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="arrow"
+ZSH_THEME="bira"
 
 # Sourcing files
 #source $HOME/.dotfiles/.zshenv
