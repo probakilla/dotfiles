@@ -2,6 +2,15 @@ function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo ‘(‘`basename $VIRTUAL_ENV `’) ‘
 }
 
+function is_wsl {
+    [[ $(grep Microsoft /proc/version) ]] && echo 1 || echo 0
+}
+
+function cds_config {
+    export CDS_PYBIN="/home/julien/pybin/"
+    export PATH=$PATH:$CDS_PYBIN
+}
+
 # Oh my zsh theme
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="gentoo"
@@ -42,13 +51,11 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration ##
 
-function is_wsl {
-    [[ $(grep Microsoft /proc/version) ]] && echo 1 || echo 0
-}
 IN_WSL=$(is_wsl)
 
 # LSCOLORS for wsl folders
 [ $IN_WSL -eq 1 ] && LS_COLORS='ow=01;34;40:di=0;41'; export LS_COLORS; unsetopt BG_NICE;
+[ "$(hostname)" = "CL003371" ] && cds_config;
 
 neofetch
 
