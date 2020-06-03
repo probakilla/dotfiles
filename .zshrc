@@ -42,10 +42,14 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration ##
 
+function is_wsl {
+    [[ $(grep Microsoft /proc/version) ]] && echo 1 || echo 0
+}
+IN_WSL=$(is_wsl)
+
 # LSCOLORS for wsl folders
-uname -r | grep -q 'Microsoft' && LS_COLORS='ow=01;34;40'; export LS_COLORS
+[ $IN_WSL -eq 1 ] && LS_COLORS='ow=01;34;40:di=0;41'; export LS_COLORS; unsetopt BG_NICE;
 
 neofetch
 
 export VIRTUAL_ENV_DISABLE_PROMPT=
-

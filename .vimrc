@@ -40,7 +40,6 @@ let g:lightline = {'colorscheme': 'wombat'}
 set noshowmode
 
 " NERDTree configuration
-autocmd vimenter * NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
 " End Vendle section
