@@ -25,11 +25,16 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'taglist.vim'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'ThePrimeagen/vim-be-good'
+Plugin 'morhetz/gruvbox'
 
 " Plugins configuration
 " Python highlighting
 let python_highlight_all=1
 syntax on
+
+" Gruvbox configuration
+set background=dark
 
 " Lightline configuration
 set laststatus=2
@@ -40,7 +45,6 @@ let g:lightline = {'colorscheme': 'wombat'}
 set noshowmode
 
 " NERDTree configuration
-autocmd vimenter * NERDTree
 nmap <F6> :NERDTreeToggle<CR>
 
 " End Vendle section
